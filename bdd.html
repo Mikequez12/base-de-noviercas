@@ -15,6 +15,7 @@
   } catch (error) {
     const error_alert = document.createElement('p');
     error_alert.innerText = 'Acceso denegado, inténtelo más tarde';
-    document.appendChild(error_alert);
+    const body = document.querySelector('body');
+    body.appendChild(error_alert);
   };
 </script>
