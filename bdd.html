@@ -1,7 +1,4 @@
-<head>
-</head>
-<body>
-</body>
+<body></body>
 <script>
   try {
     if (identify) {
@@ -16,7 +13,8 @@
       throw 'Identify is not defined correctly';
     };
   } catch (error) {
-    const error_alert = document.createElement('p').innerText = 'Acceso denegado, inténtelo más tarde';
+    const error_alert = document.createElement('p');
+    error_alert.innerText = 'Acceso denegado, inténtelo más tarde';
     document.querySelector('body').appendChild(error_alert);
   };
 </script>
