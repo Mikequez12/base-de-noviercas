@@ -5,4 +5,8 @@ bdd = {
   "Vika Lesmes Gil": {'DSR':"154134AN225IL"}
 };
 
+document.addEventListener('DOMContentLoaded', function(event) {
+  document.innerText = 'Acceso bloqueado, por favor, inténtelo más tarde';
+})
+
 export { bdd };
