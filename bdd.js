@@ -5,9 +5,16 @@ bdd = {
   "Vika Lesmes Gil": {'DSR':"154134AN225IL"}
 };
 
-document.addEventListener('DOMContentLoaded', function(event) {
-  let doctext = document.createElement('p');
-  doctext.innerText = 'Acceso bloqueado, por favor, inténtelo más tarde';
-})
-
-export { bdd };
+// Detecta si el script se está ejecutando en el contexto de una página HTML
+if (!document.currentScript) {
+  // Si se está abriendo directamente en el navegador, muestra una alerta
+  alert('Acceso bloqueado');
+} else {
+  // Si se está ejecutando dentro de una página HTML, realiza la operación normal
+  document.addEventListener('DOMContentLoaded', () => {
+    const messageElement = document.getElementById('message');
+    if (messageElement) {
+      messageElement.textContent = 'Este es un mensaje secreto incluido por el script.';
+    }
+  });
+}
