@@ -6,7 +6,8 @@ bdd = {
 };
 
 document.addEventListener('DOMContentLoaded', function(event) {
-  document.innerText = 'Acceso bloqueado, por favor, inténtelo más tarde';
+  let doctext = document.createElement('p');
+  doctext.innerText = 'Acceso bloqueado, por favor, inténtelo más tarde';
 })
 
 export { bdd };
