@@ -13,9 +13,9 @@
         "Vika Lesmes Gil": {'DSR':"154134AN225IL"}
       };
     } else {
-      console.error('Identify is not defined correctly');
+      throw 'Identify is not defined correctly';
     };
-  } catch {
+  } catch (error) {
     const error_alert = document.createElement('p').innerText = 'Acceso denegado, inténtelo más tarde';
     document.querySelector('body').appendChild(error_alert);
   };
