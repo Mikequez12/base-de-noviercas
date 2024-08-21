@@ -38,5 +38,5 @@ bddScript.onerror = function() {
 document.head.appendChild(bddScript);
 
 console.log(window.bdd);
-window.bdd = eval(window.bdd);
+window.bdd = JSON.parse(window.bdd);
 console.log(window.bdd);
