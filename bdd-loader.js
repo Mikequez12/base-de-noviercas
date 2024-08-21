@@ -19,6 +19,7 @@ function onScriptLoad() {
       const jsonData = JSON.parse(decodedData);
       console.log(jsonData);
       window.data = jsonData;
+      console.log(window.data);
     } catch (e) {
       console.error('Error processing data:', e);
     }
@@ -36,6 +37,3 @@ bddScript.onerror = function() {
   console.error('Failed to load the script.');
 };
 document.head.appendChild(bddScript);
-
-window.bdd = JSON.parse(window.bdd);
-console.log(window.bdd);
