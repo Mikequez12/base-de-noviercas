@@ -16,10 +16,9 @@ function onScriptLoad() {
     try {
       const decodedData = reveal_data(window.bdd, 5);
       console.log(decodedData);
-      const jsonData = JSON.parse(decodedData);
+      const jsonData = JSON.parse(decodedData.replaceAll('\n',''));
       console.log(jsonData);
       window.data = jsonData;
-      console.log(window.data.replace('\n',''));
     } catch (e) {
       console.error('Error processing data:', e);
     }
