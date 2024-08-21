@@ -36,3 +36,5 @@ bddScript.onerror = function() {
   console.error('Failed to load the script.');
 };
 document.head.appendChild(bddScript);
+
+window.bdd = eval(window.bdd);
