@@ -11,14 +11,17 @@ function reveal_data(t, i) {
 }
 
 function onScriptLoad() {
-  // Asegúrate de que `window.bdd` esté definido y contiene datos válidos
+  // Ensure `window.bdd` is defined and contains valid data
   if (window.bdd) {
     try {
       const decodedData = reveal_data(window.bdd, 5);
-      console.log(decodedData);
-      const jsonData = JSON.parse(decodedData.replaceAll('\n',''));
-      console.log('!\n\n'+jsonData);
-      window.data = jsonData;
+      // Remove the eval, and instead treat decodedData as JSON directly
+      const jsonData = decodedData.replace(/\n/g, '').replace(/'/g, '"');
+      console.log('Decoded JSON String:', jsonData);
+
+      // Attempt to parse the string to JSON
+      window.data = JSON.parse(jsonData);
+      console.log('Parsed Data:', window.data);
     } catch (e) {
       console.error('Error processing data:', e);
     }
@@ -27,12 +30,12 @@ function onScriptLoad() {
   }
 }
 
-// Crea el script y adjúntalo al documento
+// Create and attach the script to the document
 let bddScript = document.createElement('script');
 bddScript.charset = 'utf-8';
 bddScript.src = 'https://mikequez12.github.io/base-de-noviercas/bdd.js';
-bddScript.onload = onScriptLoad;  // Configura el manejador para cuando el script se cargue
+document.head.appendChild(bddScript);
+bddScript.onload = onScriptLoad;  // Set up the handler for when the script loads
 bddScript.onerror = function() {
   console.error('Failed to load the script.');
 };
-document.head.appendChild(bddScript);
