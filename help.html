@@ -1,0 +1,58 @@
+<meta name="robots" content="index, follow">
+<meta name="description" content="La web oficial de La Base de Noviercas">
+<meta charset="utf-8">
+
+<style>
+  li::marker {
+    color: black;
+  }
+</style>
+
+<link rel="icon" href="logo.svg" sizes="any" type="image/svg+xml">
+<link rel="icon" href="svg/icon" sizes="any" type="image/svg+xml">
+<title>Ayuda</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link rel='stylesheet' href='style.css'>
+<script src="main.js"></script>
+
+<div class='page'>
+  <h1>
+    Ayuda
+  </h1>
+  <div style="justify-content: center;display: flex;gap:10px;">
+    <div style="box-shadow: var(--shadow);padding:5px;border:solid 2px white;border-radius: 10px;display: inline-block;width: fit-content;width: 100%;">
+      <h2 style="display: inline-block;">
+        Errores
+      </h2><br>
+      <div style="display: inline-block;">¿Has encontrado algún error en la web? Lo sentimos, puedes reportarlo desde <a style="display:inline-block;" target='_blank' href='https://docs.google.com/forms/d/e/1FAIpQLSdmZ4ULsPyCpbOaC8u-M08DKPLPyPKAO_pFnAYg2a0G-FAKUw/viewform?usp=dialog'>aquí</a>.</div>
+    </div>
+    <div style="box-shadow: var(--shadow);padding:5px;border:solid 2px white;border-radius: 10px;display: inline-block;width: fit-content;width: 100%;">
+      <h2 style="display: inline-block;">
+        Contacto
+      </h2><br>
+      <div style="display: inline-block;">Puedes contactarnos desde <a style="display:inline-block;" target='_blank' href='mailto:base.noviercas@gmail.com'>aquí</a> o venir en persona a visitarnos.</div>
+    </div>
+    <div style="box-shadow: var(--shadow);padding:5px;border:solid 2px white;border-radius: 10px;display: inline-block;width: fit-content;width: 100%;">
+      <h2 style="display: inline-block;">
+        Reseñas
+      </h2><br>
+      <div style="display: inline-block;">¿Quieres ayudarnos con nuestra web? Puedes hacer una reseña en <a style="display:inline-block;" target='_blank' href='https://docs.google.com/forms/d/e/1FAIpQLSeGL8SsovwiJhVjorJsdJnfcRVtGD-6H4O-RX7p-JHnXWnNqg/viewform?usp=dialog'>este apartado</a>.</div>
+    </div>
+  </div>
+  <h2>
+    FAQ - Preguntas frecuentes
+  </h2>
+  <div style="text-align:left !important;" id='FAQ'>
+    Cargando...
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded',async () => {
+    const markdown = await fetch('help.md')
+      .then(response => response.text());
+    const html = marked.parse(markdown);
+    document.querySelector('#faq').innerHTML = html;
+  })
+</script>
+<script src="color.js"></script>

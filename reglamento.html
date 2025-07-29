@@ -1,0 +1,111 @@
+<meta name="robots" content="index, follow">
+<meta name="description" content="La web oficial de La Base de Noviercas">
+<meta charset="utf-8">
+
+<link rel="icon" href="logo.svg" sizes="any" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
+
+<title>Reglamento</title>
+
+<div class="page">
+</div>
+
+<style>
+  .clause {
+    position: relative;
+    z-index: 2;
+  }
+  .clause::after {
+    background: var(--main-color);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+  }
+  .clause:hover::after {
+    opacity: .3;
+  }
+  .clause *:not(::after) {
+    z-index: 100;
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+<script>
+  async function main() {
+    let colors = [];
+    
+    const reglamentoYAML = await fetch('reglamento.yaml').then(res => res.text());
+    const reglamento = jsyaml.load(reglamentoYAML);
+    const container = document.querySelector('.page');
+
+    // Inserta el título principal
+    const title = document.createElement('h1');
+    title.textContent = 'Reglamento';
+    container.appendChild(title);
+
+    // Función recursiva
+    function render(obj, parent, depth = 2) {
+      if (Array.isArray(obj)) {
+        obj.forEach(el => render(el, parent, depth));
+      } else if (typeof obj === 'object') {
+        for (const key in obj) {
+          // Caso especial para .selector
+          if (key === '.selector') {
+            const span = document.createElement('div');
+            span.className = 'selector';
+            obj[key].forEach((val, i) => {
+              const entity = document.createElement('span');
+              entity.textContent = val;
+              entity.id = 'entity';
+              if (!colors.includes(val)) {
+                colors.push(val)
+              }
+              entity.style.backgroundColor = `hsl(${colors.indexOf(val) * 137.5}, 80%, 70%)`; // colores variados NOTA: AÑADIR UN COLOR POR TIPO
+              span.appendChild(entity);
+            });
+            parent.querySelector('h2').style.whiteSpace = 'normal';
+            parent.appendChild(span);
+            continue;
+          }
+
+          // Crear encabezado según profundidad  
+          const heading = document.createElement(`h${Math.min(depth, 5)}`);
+          heading.textContent = key;
+          parent.appendChild(heading);
+
+          // Llamada recursiva para el valor
+          render(obj[key], parent, depth + 1);
+        }
+      } else {
+        // Elemento de texto plano
+        const p = document.createElement('p');
+        p.textContent = obj;
+        parent.appendChild(p);
+      }
+    }
+
+    // Procesar cada sección raíz
+    for (const seccion in reglamento) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'clause';
+      container.appendChild(wrapper);
+
+      const h2 = document.createElement('h2');
+      h2.textContent = seccion;
+      wrapper.appendChild(h2);
+
+      render(reglamento[seccion], wrapper, 3);
+    }
+  }
+
+  main();
+</script>
+<script src="color.js"></script>

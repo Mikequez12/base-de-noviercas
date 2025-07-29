@@ -1,0 +1,169 @@
+<meta name="robots" content="index, follow">
+<meta name="description" content="La web oficial de La Base de Noviercas">
+<meta charset="utf-8">
+
+<link rel="icon" href="logo.svg" sizes="any" type="image/svg+xml">
+<title>Noviercas</title>
+
+<style>
+  #sideimg {
+    box-shadow: var(--shadow), var(--shadow);
+    width: calc(100% - 10px);
+    height: 100%;
+    border-radius: 10px;
+    display:inline-block;
+    border:solid 2px var(--main-color);
+    background-size: cover;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  #padre {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0;
+    z-index: 10;
+    outline: solid 2px var(--main-color);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    transition: .5s;
+  }
+  #padre:hover {
+    translate: 0 -20px;
+  }
+  #padre #other::after {
+    background: var(--main-color);
+    opacity: .2;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    content: '';
+    transition: .5s;
+    pointer-events: none;
+  }
+  #padre:hover #other::after {
+    opacity: 0;
+  }
+  #padre #sideimg {
+    order: -1;
+    height: 200px;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    box-shadow: none;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+  }
+  #padre #sideimg::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    mix-blend-mode: color;
+    opacity: 1;
+    transition: .75s ease;
+    pointer-events: none;
+    filter: brightness(.5);
+  }
+  #padre:hover #sideimg::after {
+    opacity: 0;
+  }
+  #other {
+    background: white;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 200px);
+    width: calc(100% - 10px);
+    padding: 5px;
+    align-items: stretch;
+    position: relative;
+  }
+  #other * {
+    margin: 0;
+    gap: 0;
+  }
+</style>
+
+<link rel="stylesheet" href="style.css">
+
+<div class="form" style="width: 80vw;">
+  <h1>
+    Noviercas
+    <h2 id="sub" style="font-weight: normal;">
+      Bienvenid@ a la página web de la base de Noviercas, ubicada cerca del paseo de Bécquer, aquí podrás encontrar información, ayuda y mucho más.<br>¡no olvides visitar la base de vez en cuando!
+    </h2>
+  </h1>
+  <div style="gap: 15px;font-size: var(--lil-text);">
+    <div id="padre">
+      <div id="other">
+        <chr></chr>
+        <h3 style="margin-bottom:0">¡Las cosas han cambiado!</h3>
+        <p>
+          Nueva base, nueva web, nuevo año: nuevo comienzo. Como puedes ver, las cosas han cambiado. Si quieres mantenerte alertad@ de lo que pasa por aquí, puedes mirarlo en el apartado de <a href='noticias'>Noticias</a>.
+        </p>
+      </div>
+      <div id="sideimg" style="background-image:url(https://alberguelarboleda.es/img/torreon.jpg)" onclick="window.location.href='noticias'"></div>
+    </div>
+    <div id="padre">
+      <div id="sideimg" style="background-image:url(https://casabecquer.es/img/entorno/iglesia/4a.jpg)" onclick="window.location.href='reglamento'"></div>
+      <div id="other">
+        <chr></chr>
+        <h3 style="margin-bottom:0">¡Tenemos reglas!</h3>
+        <p>
+          Incluso si no conoces las reglas, eres vulnerable a ellas...<br>Recuerda que nos tomamos la seguridad enserio.<br>Para respetarnos y mantener un orden, tenemos un <a href='reglamento'>Reglamento</a> disponible.
+        </p>
+      </div>
+    </div>
+    <div id="padre">
+      <div id="other">
+        <chr></chr>
+        <h3 style="margin-bottom:0">¿Quieres conocernos?</h3>
+        <p>
+          Pide cita para recibir un tour en la página de <a href='tours'>Tours</a>.<br>Estos te proporcionarán información, ¡Y tendrás la oportunidad de ver la base en persona!<br>No pierdas la oportunidad.
+        </p>
+      </div>
+      <div id="sideimg" style="background-image:url(https://huellasdesoria.com/wp-content/uploads/2022/04/1650745936149-1024x766.jpg)" onclick="window.location.href='tours'"></div>
+    </div>
+    <div id="padre">
+      <div id='sideimg' style="background-image:url(https://webp.er2.co/es/soria/55f7e7778f264/750/60e47d876815e.webp)" onclick="window.location.href='help'"></div>
+      <div id="other">
+        <chr></chr>
+        <h3 style="margin-bottom:0">¡Estamos para ayudarte!</h3>
+        <p>
+          No tengas miedo de pedir <a href='help'>Ayuda</a>.<br>Te ofrecemos nuestro contacto además de algunas soluciones para problemas comunes que continuamos actualizando.<br>Trataremos de ayudarte en todo lo que podamos.
+        </p>
+      </div>
+    </div>
+  </div>
+  <h2>¡Tratamos de sorprenderte cada día!</h2>
+  Cada año las cosas cambian; no siempre estamos reconstruyendo los destrozos y tratando de tener una base limpia, si no que frecuentemente nos verás mejorando sistemas, diseñando entornos, o simplemente jugando a juegos de móvil entre nosotros.<br>
+  Nuestro objetivo no es más que divertirnos y divertir a cualquier otr@ que venga con nosotros. Podríamos pasar el tiempo solo andando en bici o metidos en casa, pero, ¿Qué sentido tendría eso?<br>
+  En cambio no nos metemos en casa y creamos un lugar al que llamar "segundo hogar" orgullosamente.<br>
+  Para sorprenderte esta vez hemos querido añadir algunas nuevas funciones.
+  <h2>Nuevas implementaciones</h2>
+  <div style="display: flex;flex-wrap: nowrap;gap: 10px;">
+    <div style="box-shadow: var(--shadow);border-radius:10px;outline:solid 2px var(--main-color);display: block;">
+      <h3 style="margin-top:15px;margin-bottom: 0;">Color</h3>
+      <input type="range" max="360" value="180" id="pagehue" style="accent-color: var(--main-color);width: calc(100% - 20px);" oninput="changeHUE(event)"/>
+      <button onclick="localStorage.setItem('hue',event.target.parentElement.querySelector('input').value);window.location.reload(true)" style="display: inline-block;max-width: 150px;">Guardar</button>
+      <button onclick="event.target.parentElement.querySelector('input').value=180;changeHUE({target:event.target.parentElement.querySelector('input')})" style="display: inline-block;max-width: 150px;">Restablecer</button>
+      <div style="height: 12px;"></div>
+    </div>
+  </div>
+</div>
+
+<assets>
+  <!-- Index de assets -->
+  <img alt="Logo de la organización" src="logo.svg" />
+</assets>
+
+<script src="main.js"></script>
+<script src="color.js"></script>

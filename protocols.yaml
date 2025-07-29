@@ -1,0 +1,59 @@
+- Recorridos entre empleados:
+  - Entrada de vehículos:
+    - Portero - Pide el DSR y llama al aparcabicis
+    - Aparcabicis - Verifica el DSR y lo devuelve al portero
+    - Portero - Devuelve el DSR al usuario y entrega el vehículo al aparcabicis
+    - Aparcabicis - Ingresa el vehículo
+  - Salida de vehículos:
+    - Portero - Pide y verifica el DSR y se lo entrega al aparcabicis
+    - Aparcabicis - Saca el vehículo y entrega el DSR
+    - Portero - Entrega el vehículo y el DSR
+- Portero - Entrada:
+  - Qué hacer cuando alguien pida entrar (O alguien va a entrar)::
+    - Pedir el DSR:
+      - Si el DSR no es válido o el usuario rechaza la petición:
+        - Rechazar formalmente la petición de entrada
+      - En caso contrario:
+        - Si te da las credenciales en forma de tarjeta o en forma del QR en el apartado de "cuenta" en la web:
+          - Verificar la identidad y derechos
+          - Devolver el DSR, dejar pasar al usuario y dar los buenos días
+        - Si te da las credenciales en forma de foto:
+          - Denegar el acceso, la tarjeta se tiene que enseñar físicamente o mediante la web.
+- Guarda de seguridad - Inflicción:
+  - Cómo actuar cuando ocurre una inflicción::
+    - Intentar hacer lo necesario para cumplir el reglamento de guardia
+    - Informar al usuario sobre su infricción
+    - Si sigue infringiendo las normas::
+      - Tratar de comunicarte con un juez y explicar los hechos
+      - Leer los derechos al usuario y explicar que puede defenderse
+      - Trata de cumplir la sentencia del juez con tu autoridad de guardia
+    - En caso de que la ley infringida tenga que ver con otro empleo::
+      - Trata de ponerte en contacto con un empleado con esa responsabilidad
+      - Explica claramente los hechos
+      - Trata de colaborar con ese empleado
+- Aparcabicis - Entrada:
+  - Qué hacer en caso de que un usuario te pida que le aparques la bici::
+    - Verifica que el usuario tiene permiso de parking
+    - Si tiene permiso:
+      - Dirige su bicicleta hacia el parking y espera a que el portero te abra la puerta
+      - Mete la bicicleta y saca un ticket de parking con el DSR del usuario.
+      - Coloca el ticket en el vehículo.
+    - En caso contrario:
+      - Avisa al usuario que no tiene derecho a parking y que puede recibirlo si habla con el portero; si la cosa se pone fea, avisa al guarda de seguridad.
+    - Si no estás seguro:
+      - Llama al portero para que te ayude, si no lográis obtener información, se denegará el acceso.
+- Aparcabicis - Salida:
+  - Qué hacer cuando un usuario quiera retirar su vehículo del Parking:
+    - Pídele el DSR y comprueba que el DSR y el ticket del vehículo coinciden:
+      - Guarda el ticket y espera al portero para que abra la puerta.
+      - Devuelve el DSR y el vehículo.
+    - ¿Qué hago si no tiene disponible el DSR?
+      - Solo podrá sacar el vehículo si el portero, guarda de seguridad, y aparcabicis le dan un permiso extraodrinario.
+- Guía - Atención a visitantes y usuarios:
+  - En caso de quedarse en blanco:
+    - Pide ayuda sin problemas a tus compañeros
+    - Trata de ser discreto
+  - Infringimientos del reglamento:
+    - Llama al guardia de seguridad
+    - Deja que haga su trabajo
+    - Continúa mientras tanto con el resto de visitantes
