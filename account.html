@@ -1,0 +1,91 @@
+<meta name="robots" content="index, follow">
+<meta name="description" content="La web oficial de La Base de Noviercas">
+<meta charset="utf-8">
+
+<link rel="icon" href="logo.svg" sizes="any" type="image/svg+xml">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+
+<title>Cuenta</title>
+
+<logo></logo>
+
+<style>
+  @media (max-width: 1000px) {
+    #protocols div {
+      width: 100% !important;
+      font-size: 18px;
+    }
+  }
+</style>
+
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+<script src="account.js" defer></script>
+<div class="page">
+  <h1>
+    Tu cuenta
+  </h1>
+  <div class='page'>
+    <div style="display:flex;flex-wrap:nowrap;gap:50px;">
+      <div>
+        <h2 style="margin-bottom: 3px;">
+          Tus datos
+        </h2>
+        <div>
+              <p><span style="font-weight:bold">Nombre y apellidos:</span> <span id='name'></span></p>
+              <p><span style="font-weight:bold">Correo electrónico:</span> <span id='mail'></span></p>
+              <p><span style="font-weight:bold">DSR:</span> <span id='dsr'></span></p>
+              <p><span style="font-weight:bold">Rol:</span> <span id='rol'></span></p>
+          </div>
+      </div>
+      <div>
+        <h2 style="margin-bottom: 3px;">
+          Código QR
+        </h2>
+        <div style="text-align:center;">
+          <img id='qrcode' alt="Código QR" style="border-radius: 5px; box-shadow:var(--shadow);width: 30vw;max-width: 300px;" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>
+    Participación en tours
+  </h1>
+  <div class='page' id='tour-participating' style="text-align:center;display:flex">
+    <!--- PART -->
+  </div>
+  <div id='admin-content'>
+    <h1 style="margin-bottom: 3px;">
+      Herramientas de administradores
+    </h1>
+    <br>
+    <div class='form' id='admin-form'>
+      <h2 style="margin: 0;">
+        Detección de DSR
+      </h2>
+      <entry><span>DSR</span><input id="search-dsr" onchange='updateDSRDetector(event)' placeholder=''></entry>
+      <entry><span>Nombre y apellidos</span><input id='search-name' onchange='updateDSRDetector(event)' placeholder=''></entry>
+      <entry><span>Rol</span><input disabled id='search-rol' onchange='updateDSRDetector(event)' placeholder=''></entry>
+      <entry><span>Permiso de parking</span><input disabled id='search-parking' onchange='updateDSRDetector(event)' placeholder=''></entry>
+      <a href="qr-code"><button>
+        Usar código QR
+      </button></a>
+      <br>
+      <h2 style="margin: 0;">
+        Lista blanca de tours
+      </h2>
+      <entry><span>Código de tour</span><input onchange="tourWhitelist(event)" id="tour-code" placeholder=""/></entry>
+      <div id="tour-whitelist">
+      </div>
+      <br>
+      <h2 style="margin-bottom: 3px;">
+        Protocolos
+      </h2>
+      <div class='page' id='protocol-page'>
+        <div style="display:flex;justify-content:center;align-content:center;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="color.js"></script>

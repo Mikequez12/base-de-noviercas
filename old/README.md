@@ -1,0 +1,9 @@
+# base-de-noviercas
+## .old
+- [ban-loader.js](ban-loader.js)
+- [ban.js](ban.js)
+- [bdd-loader.js](bdd-loader.js)
+- [bdd.js](bdd.js)
+- [README.md](README.md)
+- [reglamento.html](reglamento.html)
+- [render.yaml](render.yaml)
