@@ -50,6 +50,7 @@ Estas son las mejoras:
     - Verificación anónima
     - Acceso denegado a los tokens
     - Se ha añadido el uso de los códigos QR
+        - Se ha arreglado el uso de los QR
 - Planes
     - Al dejar de usar `EmailJS`, y usar en vez de eso usar `Render`, se ha quitado el límite de 200 mails que teníamos antes
 - Estilo de la web

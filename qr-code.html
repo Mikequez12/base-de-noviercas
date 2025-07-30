@@ -1,18 +1,105 @@
-<script src="main.js"></script>
-<link rel="icon" href="logo.svg">
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html>
 <meta charset="utf-8">
+<head>
+  <title>Lector QR</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page {
+      padding: 15px;
+      max-width: 3000px;
+      max-height: calc(100vh - 200px);
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      display: flex;
+      flex-flow: column;
+    }
+    video, canvas {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: var(--shadow);
+      border: solid 2px var(--main-color);
+    }
+    div#vid {
+      height: calc(100% - 80px);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Lector QR</h1>
+    <div id="vid">
+      <video id="video" autoplay></video>
+      <canvas id="canvas" style="display:none;"></canvas>
+    </div>
+  </div>
 
-<div class="page">
-  <h1>
-    403
-  </h1>
-  <h2>
-    No deberías estar aquí
-  </h2>
-  <p>
-    La cuenta actual no tiene los permisos suficientes para estar aquí.
-  </p>
-</div>
-<script src="qr-code.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+  <script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    async function startCamera() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: "environment" }
+        });
+        video.srcObject = stream;
+        video.setAttribute("playsinline", true);
+        await video.play();
+        requestAnimationFrame(scan);
+      } catch (err) {
+        alert("Error accediendo a la cámara: " + err.message);
+      }
+    }
+
+    function scan() {
+      if (video.readyState === video.HAVE_ENOUGH_DATA) {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const code = jsQR(imageData.data, canvas.width, canvas.height);
+        if (code) {
+          if (code.data != '') {
+            window.location.href = `//mikequez12.github.io/base-de-noviercas/account?dsr_search=${code.data}`;
+          };
+        }
+      }
+      requestAnimationFrame(scan);
+    }
+
+    async function pre() {
+      let dsr = localStorage.getItem('acc');
+      var users = await getUsers();
+      alert(users[dsr])
+    }
+
+    async function loadMain() {
+      return new Promise((resolve, reject) => {
+        setInterval(() => {
+          if (typeof getUsers == 'function') {
+            clearInterval();
+            resolve()
+          }
+        }, 50)
+      });
+    }
+
+    async function main() {
+      await loadMain();
+      await pre();
+      startCamera();
+    }
+
+    main()
+  </script>
+</body>
+</html>
 <script src="color.js"></script>
+<script src="main.js"></script>
