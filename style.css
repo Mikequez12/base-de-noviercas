@@ -82,7 +82,7 @@ body::after {
   background-position: 0 0;
   animation: bgmove 20s infinite linear, fade 2s ease forwards;
   z-index: -1;
-  filter: hue-rotate(calc(180deg - var(--color-hue)));
+  filter: hue-rotate(calc(180deg + var(--color-hue)));
   opacity: .5;
 }
 
