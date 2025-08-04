@@ -80,9 +80,9 @@ body::after {
   background-size: 8em 8em;
   background-color: #ffffff;
   background-position: 0 0;
-  animation: bgmove 5s infinite linear, fade 2s ease forwards;
+  animation: bgmove 20s infinite linear, fade 2s ease forwards;
   z-index: -1;
-  filter: hue-rotate(var(--color-hue));
+  filter: hue-rotate(calc(180deg - var(--color-hue)));
   opacity: .5;
 }
 
