@@ -27,10 +27,13 @@
     div#vid {
       height: calc(100% - 80px);
     }
+    .hidden {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
-  <div class="page">
+  <div class="page" class="hidden">
     <h1>Lector QR</h1>
     <div id="vid">
       <video id="video" autoplay></video>
@@ -39,7 +42,20 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+  <script src="main.js"></script>
   <script>
+    async function verify() {
+      let users_ = await getUsers();
+      let dsr_ = localStorage.getItem('acc');
+      if (dsr_ == undefined || dsr_ == '') {
+        window.location.href = 'login';
+      } else if (users_[dsr_].rol != 'Administrador') {
+        window.location.href = 'login';
+      } else {
+        document.querySelector('.page').classList.remove('hidden');
+      }
+    }
+
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
@@ -77,7 +93,6 @@
     async function pre() {
       let dsr = localStorage.getItem('acc');
       var users = await getUsers();
-      alert(users[dsr])
     }
 
     async function loadMain() {
@@ -92,6 +107,7 @@
     }
 
     async function main() {
+      await verify();
       await loadMain();
       await pre();
       startCamera();
