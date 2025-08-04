@@ -11,16 +11,28 @@ async function login() {
         alert('Error, puede que ese DSR no se encuentre en nuestras bases de datos.');
         return false;
     } else {
-        document.querySelector('.form').innerHTML=`<h1>Verificación</h1><p>Hemos enviado un correo electrónico a su cuenta. Contiene un enlace con el que puede iniciar sesión. Recuerde revisar el apartado de <b>"spam"</b>.</p><span style="color:gray;">Por seguridad, el enlace caducará en 5 minutos.</span>`;
+        document.querySelector('.form').innerHTML=`<h1>Verificación</h1><p>Hemos enviado un correo electrónico a su cuenta. Contiene un enlace con el que puede iniciar sesión. Recuerde revisar el apartado de <b>"spam"</b>.</p><span style="color:gray;">Por seguridad, el enlace caducará en 5 minutos.</span><p><a style="text-decoration:underline;cursor:pointer;">Reenviar mail</a></p>`;
 
-        let data = await fetch('https://base-de-noviercas.onrender.com/token',{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({"dsr":users.DSR,"name":users.name,"mail":users.mail})
-        })
-        .then(r => r.json())
+        document.querySelector('.form a').addEventListener(
+            'click',
+            () => {
+                sendMail()
+            }
+        )
+
+        async function sendMail() {
+            alert('Se ha enviado el mensaje');
+            let data = await fetch('https://base-de-noviercas.onrender.com/token',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({"dsr":users.DSR,"name":users.name,"mail":users.mail})
+            })
+            .then(r => r.json())
+        }
+
+        await sendMail();
         /*const send = await fetch('https://base-de-noviercas.onrender.com/send',{
             method: 'POST',
             headers: {
