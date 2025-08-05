@@ -12,12 +12,24 @@ Esperamos que os guste esta nueva web y que se haga simple y fácil de entender.
 ### Cambios importantes
 
 
-**Junio:** Se han aprobado cambios para hacer la web accesible 24/7 desde cualquier lado del mundo sacrificando el servicio seguro de doble verificación [[ver detalles]](changelog#06/25)
+**Junio:**
 
-**Julio:** Se ha implementado un nuevo sistema de doble verificación para garantizar seguridad. [[ver detalles]](changelog#07/25)
+Se han aprobado cambios para hacer la web accesible 24/7 desde cualquier lado del mundo sacrificando el servicio seguro de doble verificación [[ver detalles]](changelog#06/25)
+
+**Julio:**
+
+Se ha implementado un nuevo sistema de doble verificación para garantizar seguridad. [[ver detalles]](changelog#07/25)
 
 #
 
 ## 2025
 
+**Junio:**
+
 Aún no hemos decidido en qué fecha iremos a Noviercas este año, pero estamos **bastante** seguros de que iremos.
+
+**Julio:**
+
+Efectivamente hemos terminado viniendo a Noviercas, y hemos comenzado con las restauraciones de la base.
+
+De momento ninguna persona de rango `Visitante` o sin `DSR`[?](help) podrá acceder a la base. Hemos pensado en este protocolo para la seguridad de los visitantes por las constantes obras, y para poder dedicar todo el tiempo a este trabajo y no a la vigilancia o a otros servicios, sentimos las molestias; intentaremos que las obras cesen lo antes posible para abrirlo al público.
