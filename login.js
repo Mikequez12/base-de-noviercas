@@ -21,7 +21,6 @@ async function login() {
         )
 
         async function sendMail() {
-            alert('Se ha enviado el mensaje');
             let data = await fetch('https://base-de-noviercas.onrender.com/token',{
                 method: 'POST',
                 headers: {
@@ -29,7 +28,16 @@ async function login() {
                 },
                 body: JSON.stringify({"dsr":users.DSR,"name":users.name,"mail":users.mail})
             })
-            .then(r => r.json())
+            .then(r => r.json());
+            if (!data.ok) {
+                alert('El envío de mensaje ha fallado... enviando de nuevo...');
+                setTimeout(() => {
+                    sendMail();
+                })
+            } else {
+                alert('Se ha enviado el mensaje correctamente.')
+            }
+            return data
         }
 
         await sendMail();
