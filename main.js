@@ -1,6 +1,8 @@
 var msgPanel;
 
 function alert(text, duration = 5000) {
+  console.info('ALERT: ',text);
+  
   const msg = msgPanel.appendChild(document.createElement('div'));
   msg.classList.add('alert');
   msg.id = `alert-${Date.now()}-${Math.random()}`;

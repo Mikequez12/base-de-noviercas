@@ -29,11 +29,12 @@ async function login() {
                 body: JSON.stringify({"dsr":users.DSR,"name":users.name,"mail":users.mail})
             })
             .then(r => r.json());
+            console.log('Se ha procesado la solicitud del TOKEN');
             if (!data.ok) {
                 alert('El envío de mensaje ha fallado... enviando de nuevo...');
                 setTimeout(() => {
                     sendMail();
-                })
+                }, 1500)
             } else {
                 alert('Se ha enviado el mensaje correctamente.')
             }
