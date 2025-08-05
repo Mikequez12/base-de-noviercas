@@ -93,8 +93,8 @@ function isoDate(input) {
   const [dia, hora] = resto.split(' ');
 
   // Aseguramos que la hora esté bien formateada
-  const [h, m, s] = hora.split(':');
-  const horaISO = `${h.padStart(2, '0')}:${m.padStart(2, '0')}:${s.padStart(2, '0')}`;
+  const [h, m] = hora.split(':');
+  const horaISO = `${h.padStart(2, '0')}:${m.padStart(2, '0')}`;
 
   const iso = `${año}-${mes}-${dia}T${horaISO}`;
   const date = new Date(iso);
