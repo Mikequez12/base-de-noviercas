@@ -28,7 +28,7 @@ Manipulación de DSR:
       - Miembros
       - Usuarios
       - Visitantes
-Gestión de objetos:
+Inspecciones:
   - a. Importación y exportación de elementos:
     - Todos los elementos serán inspeccionados antes de su ingreso y de su salida para evitar robos, daños u otras situaciones inconvenientes solo si estos resultan sospechosos para el empleado que realiza la inspección. Estas inspecciones las realizará comunmente el aparcabicis o el portero, aunque todos tienen el derecho de hacerlo.
   - b. Derechos de un sujeto ante una inspección:
@@ -49,7 +49,7 @@ Gestión de objetos:
       - Visitantes
 Agresión:
   - a. Agresión física o/y psicológica:
-    - Ningún visitante tiene derecho a agredir a ninguna persona en el recinto, en caso de infringir esta norma, el sujeto se verá obligad@ a abandonar el recinto inmediatamente, deshabilitando el DSR probablemente.
+    - Ningún sujeto, incluyendo visitantes, miembros, empleados, etc. tiene derecho a agredir a ninguna persona en el recinto (siempre que esta persona esté infringiendo alguna regla y la otra persona tiene derecho (como el guardia de seguridad o el portero)), en caso de infringir esta norma, el sujeto se verá obligad@ a abandonar el recinto inmediatamente, siendo el castigo mínimo deshabilitar temporalmente el DSR y el máximo quedar expulsado permanentemente de la base, 
   - ".selector":
     - Administradores
     - Miembros
@@ -96,6 +96,8 @@ Carril bici:
 Seguridad:
   - a. Publicación de datos:
     - No nos hacemos cargo de toda información que comparta un usuario / empleado / visitante; por ende, si alguien comparte su ID de DSR, credencial u otros datos, es responsabilidad de él / ella / ellos. Es posible que alguien comparta su ID de DSR sin querer, en cuyo caso podemos intentar cambiar su ID, sin embargo, recalcamos que este proceso es válido solo una vez, y es un proceso lento y demorado.
+  - b. Estorbo de entradas o salidas:
+    - A menos de que estés autorizado por el guardia de seguridad o el aparcabicis, no podrás estorbar las entradas o salidas (incluyendo por supuesto las de seguridad). Puedes ser expulsado y tu DSR puede ser deshabilitado temporalmente.
   - ".selector":
     - Administradores
     - Miembros
