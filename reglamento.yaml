@@ -8,7 +8,7 @@ Permiso de entrada:
     - 3. Autoportero:
       - Si eres empleado; en caso de que no haya ningún portero dentro o el portero no esté disponible, puedes entrar.
   - b. Permiso de entrada en Tours:
-      - Cuando hay un tour, debes inscribirte desde la página web, en la sección de tours y debes dar tus credenciales en la base para que te dejen acceder si el día y la hora son correctas junto a las credenciales.
+      - Si entras como participante en un tour, debes inscribirte en la web previamente y presentar tus credenciales en la base en la fecha y hora asignadas para acceder.
   - c. Permiso de entrada de parking:
       - Es posible que quieras guardar tu bicicleta u otro vehículo. En cuyo caso, solo debes avisar al aparcabicis o al portero. Después, tras una verificación de DSR hecha para conocer si tienes derecho al parking (que puedes demandar en la inscripción) o en la recepción, el aparcabicis se encargará de guardar y proteger tu bicicleta. En caso de que el DSR dictamine que no tienes derecho, tu vehículo será rechazado.
   - ".selector":
@@ -22,7 +22,7 @@ Manipulación de DSR:
   - b. Cambios en la base de datos:
       - Todos los cambios aparecen en nuestros registros, si se encuentra una actividad sospechosa, se comenzará una investigación hasta dar con el culpable, quien será expulsad@ automáticamente (Estos cambios no cuentan en el responsable de las bases de datos).
   - c. Falsificación o copia:
-      - Si un DSR resulta ser falso o es una copia no-original, podrás ser vetado de la base hasta 2 semanas. Nos tomamos muy seriamente nuestra seguridad y la de todos los demás, así que recuerda que debes presentarte con las credenciales correctas y verificar su autenticidad.
+      - Si un DSR resulta ser falso o es una copia no-original, podrás ser expulsado de la base hasta 2 semanas. Nos tomamos muy seriamente nuestra seguridad y la de todos los demás, así que recuerda que debes presentarte con las credenciales correctas y verificar su autenticidad.
   - ".selector":
       - Administradores
       - Miembros
@@ -30,10 +30,10 @@ Manipulación de DSR:
       - Visitantes
 Inspecciones:
   - a. Importación y exportación de elementos:
-    - Todos los elementos serán inspeccionados antes de su ingreso y de su salida para evitar robos, daños u otras situaciones inconvenientes solo si estos resultan sospechosos para el empleado que realiza la inspección. Estas inspecciones las realizará comunmente el aparcabicis o el portero, aunque todos tienen el derecho de hacerlo.
+    - Todos los elementos serán inspeccionados antes de su ingreso y de su salida para evitar robos, daños u otras situaciones inconvenientes solo si estos resultan sospechosos para el empleado que realiza la inspección. Estas inspecciones las realizará comunmente el portero, aunque el aparcabicis puede hacerlo también con vehículos; si ninguno de los dos está disponible, los demás empleados podrán hacerlo también.
   - b. Derechos de un sujeto ante una inspección:
-    - 1. Todo humano tiene pertenencias privadas que no quiere enseñar. En cuyo caso, puede decir "no quiero enseñar esto". Al evocar la frase, el objeto quedará requisado en la entrada durante toda la visita, aunque no podrá ser aberto ni inspeccionado por nadie más; si esta frase no es evocada, aceptas que tus objetos sean inspeccionados del modo que dicta el apartado 3.
-    - 2. Ningún inspector tiene derecho a inspeccionar objetos de rango 1.
+    - 1. Todo humano tiene pertenencias privadas que no quiere enseñar. En cuyo caso, puede decir "no quiero enseñar esto". Al evocar la frase, el objeto quedará requisado en la entrada durante toda la visita, aunque no podrá ser aberto ni inspeccionado por nadie más; si esta frase no es evocada, aceptas que tus objetos sean inspeccionados de forma cuidadosa pero estricta.
+    - 2. Ningún inspector tiene derecho a inspeccionar objetos de rango 1 ni la mayoría de rango 2 (solo si estos son gravemente sospechosos), aunque si el portero rechaza la entrada de algún objeto, este no podrá entrar en la base.
     - 3. Los objetos se catalogan en los siguientes rangos:
       - Grado 1 (Intocable por cualquiera):
         - Teléfonos, Tablet, Portátiles, ...
@@ -49,7 +49,7 @@ Inspecciones:
       - Visitantes
 Agresión:
   - a. Agresión física o/y psicológica:
-    - Ningún sujeto, incluyendo visitantes, miembros, empleados, etc. tiene derecho a agredir a ninguna persona en el recinto (siempre que esta persona esté infringiendo alguna regla y la otra persona tiene derecho (como el guardia de seguridad o el portero)), en caso de infringir esta norma, el sujeto se verá obligad@ a abandonar el recinto inmediatamente, siendo el castigo mínimo deshabilitar temporalmente el DSR y el máximo quedar expulsado permanentemente de la base, 
+    - Nadie tiene derecho a agredir a otro; esta regla es inválida en dos casos. 1. El agresor es el guardia de seguridad (esta agresión puede ser denunciada al juez). 2. Se está agrediendo en defensa propia (esto no significa que se puedan evitar las consecuencias incluso con falta de pruebas). En caso de infringir esta norma, el sujeto se verá obligad@ a abandonar el recinto inmediatamente, siendo el castigo mínimo deshabilitar temporalmente el DSR y el máximo quedar expulsado permanentemente de la base, 
   - ".selector":
     - Administradores
     - Miembros
@@ -57,7 +57,7 @@ Agresión:
     - Visitantes
 Destrucción:
   - a. Destrozar la base:
-    - Si un juez decreta que has destrozado una parte de la base a posta, serás expulsado inmediatamente, y tu DSR será deshabilitando en caso de que el juez determine el asalto como un daño grave.
+    - Si un juez decreta que has destrozado una parte de la base a posta, serás expulsado inmediatamente, y tu DSR será deshabilitado en caso de que el juez determine el asalto como un daño grave.
   - ".selector":
     - Administradores
     - Miembros
@@ -65,7 +65,7 @@ Destrucción:
     - Visitantes
 Poderes del consejo de empleados:
   - a. Expulsión
-    - Si el 70% de la comunidad de empleados opina que un empleado debería ser despedido, se convocará una reunión donde se evaluarán cada una de estas opiniones. Si las opiniones están correctamente justificadas, el empleado será expulsado.
+    - Si el 70% de la comunidad de empleados opina que un empleado debería ser despedido, se convocará una reunión donde se evaluarán cada una de estas opiniones. Si las justificaciones son válidas conforme al reglamento, el empleado será expulsado.
   - ".selector":
     - Administradores
 Derechos de los empleados:
@@ -87,10 +87,9 @@ Carril bici:
   - b. Paso peatonal:
     - Todo usuario o visitante puede pasar por un paso de peatones si no hay ningun vehículo circulando. Esta acción de pasar por el cruce, debe ser claramente señalizado al personal de vigiliancia y a todos las personas que circulen en sus vehículos.
   - c. Líneas cortadas:
-    - Las líneas cortadas se encuentran en el borde de la intersección del carril bici, que divide la base principal y el parking. Esta línea indica que solo los empleados pueden pasar por ella. En caso de pasar por ella sin querer, puede retroceder y no tendrá nada de qué preocuparse. Esta ley no es válida para los usuarios especiales (Un rol destacado).
+    - Las líneas cortadas se encuentran en el borde de la intersección del carril bici, que divide la base principal y el parking. Esta línea indica que solo los empleados pueden pasar por ella. En caso de pasar por ella sin querer, puede retroceder y no tendrá nada de qué preocuparse.
   - ".selector":
     - Administradores
-    - Miembros
     - Usuarios
     - Visitantes
 Seguridad:
