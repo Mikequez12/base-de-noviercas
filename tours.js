@@ -89,8 +89,8 @@ async function searchTours() {
 
 function isoDate(input) {
   console.log(input);
-  const [dia, mes, resto] = input.split('/');
-  const [año, hora] = resto.split(' ');
+  const [año, mes, resto] = input.split('/');
+  const [dia, hora] = resto.split(' ');
 
   // Aseguramos que la hora esté bien formateada
   const [h, m, s] = hora.split(':');
