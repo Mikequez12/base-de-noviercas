@@ -3,7 +3,7 @@
     - Portero - Pide el DSR y llama al aparcabicis
     - Aparcabicis - Verifica el DSR y lo devuelve al portero
     - Portero - Devuelve el DSR al usuario y entrega el vehículo al aparcabicis
-    - Aparcabicis - Ingresa el vehículo
+    - Aparcabicis - Accede con el vehículo
   - Salida de vehículos:
     - Portero - Pide y verifica el DSR y se lo entrega al aparcabicis
     - Aparcabicis - Saca el vehículo y entrega el DSR

@@ -76,11 +76,18 @@ document.addEventListener('DOMContentLoaded', async (event) => {
   })
 })
 
-function parseDate(fechaStr) {
-  const [fechaPart, horaPart = '00:00:00'] = fechaStr.split(' ');
-  const [dia, mes, anio] = fechaPart.split('/').map(Number);
-  const [hora, min, seg] = horaPart.split(':').map(Number);
-  return new Date(anio, mes - 1, dia, hora, min, seg);
+function parseDate(input) {
+  console.log(input);
+  const [año, mes, resto] = input.split('/');
+  const [dia, hora] = resto.split(' ');
+
+  // Aseguramos que la hora esté bien formateada
+  const [h, m] = hora.split(':');
+  const horaISO = `${h.padStart(2, '0')}:${m.padStart(2, '0')}`;
+
+  const iso = `${año}-${mes}-${dia}T${horaISO}`;
+  const date = new Date(iso);
+  return date;
 }
 
 function loadMainJS(timeout = 10000) {

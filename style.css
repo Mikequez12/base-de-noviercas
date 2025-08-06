@@ -1,11 +1,11 @@
 @import url('font.css');
 
 @media (max-width: 1000px) {
-  body {
+  body:not(.disablemobile) {
     font-size: 25px;
     --lil-text: 20px;
   }
-  h2 {
+  body:not(.disablemobile) h2 {
     font-size: 30px;
   }
 }
