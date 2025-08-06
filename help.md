@@ -8,7 +8,7 @@
 
 ### ¿Y si quiero crear una cuenta?
 1. Entonces, en la página de inicio de sesión, pulsa el botón "_¿No tienes un DSR?_".</li>
-2. Rellena el formulario y espera pacientemente hasta la verificación humana.</li>
+2. Rellena el formulario y espera pacientemente hasta que un empleado verifique la solicitud.</li>
 
 <br>
 
@@ -43,6 +43,15 @@ Recomendamos memorizar el código de DSR por seguridad, pero si pierdes la tarje
   2. **Error interno:**<br>
      Puede que la web no haya reconocido las credenciales, aunque es un caso muy extraño.
      Si ocurre esto, primero verifica que no te están llegando más mensajes, si es así, pide un nuevo mensaje de verificación.
-  3. **Mensaje duplicado:**<br>
+  3. **Mensajes duplicados:**<br>
      Puede que sin querer hayas pedido dos veces la verificación.
-     En cuyo caso, el último mensaje recibido debería ser el correcto, unque podría no ser así.
+     En cuyo caso, no debes preocuparte, ambos deberían funcionar sin problemas.
+  4. **Ni siquiera te llega el mensaje:**<br>
+     Esto puede ocurrir por varias razones:
+     1. **El backend se está iniciando:**<br>
+        Esto significa que el sistema de envío y procesamiento de códigos (como los del correo electrónico) se está iniciando.
+        En unos minutos (de 1 a 3) se debería enviar el código. En caso de fallo, la web intentará volver a enviarlo, aunque puedes pedir otro código manualmente.
+     2. **Error interno:**<br>
+        Pueden haber problemas con el servidor, en cuyo caso, recomendamos que nos contactes.
+     3. **Está en Spam:**<br>
+        Aunque no es muy común, puede ser que tu app haya detectado el correo como un anuncio u otro servicio de publicidad, así que lo registra en _spam_, una carpeta aparte. Recomendamos que en las categorías, selecciones `todos` en vez de `bandeja de entrada`.
