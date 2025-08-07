@@ -32,4 +32,4 @@ Aún no hemos decidido en qué fecha iremos a Noviercas este año, pero estamos 
 
 Efectivamente hemos terminado viniendo a Noviercas, y hemos comenzado con las restauraciones de la base.
 
-De momento ninguna persona de rango `Visitante` o sin `DSR`[?](help) podrá acceder a la base. Hemos pensado en este protocolo para la seguridad de los visitantes por las constantes obras, y para poder dedicar todo el tiempo a este trabajo y no a la vigilancia o a otros servicios, sentimos las molestias; intentaremos que las obras cesen lo antes posible para abrirlo al público.
+De momento ninguna persona de rango `Visitante` o sin `DSR`<sup><a href="help">?</a></sup> podrá acceder a la base. Hemos pensado en este protocolo para la seguridad de los visitantes por las constantes obras, y para poder dedicar todo el tiempo a este trabajo y no a la vigilancia o a otros servicios, sentimos las molestias; intentaremos que las obras cesen lo antes posible para abrirlo al público.

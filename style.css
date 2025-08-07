@@ -150,11 +150,29 @@ entry > span {
     position: absolute;
     font-size: 13px;
     left: 15px;
-    top: -14px;
-    background: linear-gradient(to top, transparent, transparent 2px, #eee 2px, #eee 4px, transparent 4px);
+    top: -12px;
+    /*background: linear-gradient(to top, transparent, transparent 4px, #eee 4px, #eee 6px, transparent 6px);*/
     padding: 0 5px;
     pointer-events: none;
+    z-index: 1;
     transition: .1s left, .1s top, .1s font-size;
+}
+
+entry > span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #eee;
+  left: 0;
+  bottom: 4px;
+  opacity: 0;
+  transition: .15s;
+  z-index: -1;
+}
+
+entry:not(:has(input:not(:focus):placeholder-shown)) > span::after {
+  opacity: 1;
 }
 
 entry input {

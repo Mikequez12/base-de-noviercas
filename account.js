@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     p.classList.add('page');
     p.appendChild(document.createElement('div'));
     let title = p.appendChild(document.createElement('h2'));
+    let br = p.appendChild(document.createElement('br'));
     let ldv = p.appendChild(document.createElement('div'));
     let dv = ldv.appendChild(document.createElement('div'));
     dv.style.textAlign = 'left';
@@ -245,7 +246,7 @@ async function tourWhitelist(event) {
 
 async function load() {
   let response = await main();
-  if (response) { setTimeout(() => document.querySelector('logo').id = 'hide', 1000); }
+  if (response) { setTimeout(() => document.querySelector('logo').id = 'hide', 100); }
 
   var searchParams;
 
