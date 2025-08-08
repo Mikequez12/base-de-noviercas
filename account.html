@@ -32,6 +32,7 @@
     mix-blend-mode: lighten;
     left: 0;
     top: 0;
+    pointer-events: none;
   }
   div.page h2 {
     border-bottom: solid 2px white;
@@ -52,6 +53,10 @@
     align-items: middle;
     justify-content: center;
     margin-top:0;
+  }
+
+  #qrcode {
+    cursor: pointer;
   }
 </style>
 
@@ -75,6 +80,7 @@
               <p><span style="font-weight:bold">Correo electrónico:</span> <span id='mail'></span></p>
               <p><span style="font-weight:bold">DSR:</span> <span id='dsr'></span></p>
               <p><span style="font-weight:bold">Rol:</span> <span id='rol'></span></p>
+              <p><span style="font-weight:bold">Matrícula:</span> <span id='matricula'></span></p>
           </div>
       </div>
       <div style="width: 2px; background: white; box-shadow: var(--shadow);"></div>
@@ -106,8 +112,10 @@
       </h2>
       <entry><span>DSR</span><input id="search-dsr" onchange='updateDSRDetector(event)' placeholder=''></entry>
       <entry><span>Nombre y apellidos</span><input id='search-name' onchange='updateDSRDetector(event)' placeholder=''></entry>
+      <entry><span>Matrícula</span><input id='search-matricula' onchange='updateDSRDetector(event)' placeholder=''></entry>
       <entry><span>Rol</span><input disabled id='search-rol' onchange='updateDSRDetector(event)' placeholder=''></entry>
       <entry><span>Permiso de parking</span><input disabled id='search-parking' onchange='updateDSRDetector(event)' placeholder=''></entry>
+      <button style="background: white; border-color: var(--main-color); color: var(--main-color); width: 100%;" onclick="event.target.parentElement.querySelectorAll('entry > input').forEach(_ => _.value = '');">Limpiar selección</button>
       <a href="qr-code"><button style="width: 100%;">
         Usar código QR
       </button></a>

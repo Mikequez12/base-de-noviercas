@@ -144,7 +144,11 @@ async function main() {
     document.querySelector('#mail').textContent = users[dsr].mail;
     document.querySelector('#dsr').textContent = dsr;
     document.querySelector('#rol').textContent = users[dsr].rol;
+    document.querySelector('#matricula').textContent = users[dsr].IRV;
     document.querySelector('#qrcode').src = `https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${dsr}`;
+    document.querySelector('#qrcode').addEventListener('click', () => {
+      window.open(`https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${dsr}`,'_blank');
+    });
     if (users[dsr].rol != "Administrador") {
       document.querySelector('#admin-content').remove()
     } else {
@@ -196,14 +200,15 @@ async function updateDSRDetector(event) {
   let nkey = {
     "DSR": ["dsr"],
     "Nombre y apellidos": ["name", "surname"],
-    "Rol": ["rol"]
+    "Rol": ["rol"],
+    "Matrícula": ["IRV"]
   }[event.target.parentElement.querySelector('span').textContent];
   if (nkey == 'dsr') {
     key_ = key_.toUpperCase();
   }
   values = Object.keys(values).filter((k, i) => {
     return nkey.map((l) => values[k][l]).join(' ') == key_
-  });
+  })
   values = values[values.length - 1]
   if (values == undefined) {
     alert('El usuario no ha sido encontrado, verifica las mayúsculas y tildes en el nombre')
@@ -216,13 +221,17 @@ async function updateDSRDetector(event) {
       'search-dsr': ["dsr"],
       'search-name': ["name", "surname"],
       'search-rol': ["rol"],
-      'search-parking': ['parking']
+      'search-parking': ['parking'],
+      'search-matricula': ['IRV']
     }[id];
     el.querySelector('input').value = nkey.map((k) => values[k]).join(' ');
     if (id == 'search-parking') {
       el.querySelector('input').value = nkey.map((k) => values[k])[0] ? 'Sí' : 'No';
     }
-  });
+    if (id == 'search-matricula') {
+      el.querySelector('input').value = nkey.map(k => values[k])[0] || '(Ninguna)';
+    }
+  })
 }
 
 async function tourWhitelist(event) {

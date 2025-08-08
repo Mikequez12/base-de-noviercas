@@ -21,6 +21,7 @@ async function login() {
         )
 
         async function sendMail() {
+            alert('Enviando mensaje...')
             let data = await fetch('https://base-de-noviercas.onrender.com/token',{
                 method: 'POST',
                 headers: {
