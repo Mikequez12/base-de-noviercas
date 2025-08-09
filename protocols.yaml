@@ -1,7 +1,7 @@
 - Recorridos entre empleados:
   - Entrada de vehículos:
     - Portero - Pide el DSR y llama al aparcabicis
-    - Aparcabicis - Verifica el DSR y lo devuelve al portero
+    - Aparcabicis - Verifica el DSR y matrícula y devuelve el DSR al portero
     - Portero - Devuelve el DSR al usuario y entrega el vehículo al aparcabicis
     - Aparcabicis - Accede con el vehículo
   - Salida de vehículos:
@@ -16,6 +16,7 @@
       - En caso contrario:
         - Si te da las credenciales en forma de tarjeta o en forma del QR en el apartado de "cuenta" en la web:
           - Verificar la identidad y derechos
+          - Verificar la coincidencia de la matrícula con el DSR
           - Devolver el DSR, dejar pasar al usuario y dar los buenos días
         - Si te da las credenciales en forma de foto:
           - Denegar el acceso, la tarjeta se tiene que enseñar físicamente o mediante la web.
@@ -33,19 +34,18 @@
       - Trata de colaborar con ese empleado
 - Aparcabicis - Entrada:
   - Qué hacer en caso de que un usuario te pida que le aparques la bici::
-    - Verifica que el usuario tiene permiso de parking
+    - Verifica que el usuario tiene permiso de parking y matrícula
     - Si tiene permiso:
       - Dirige su bicicleta hacia el parking y espera a que el portero te abra la puerta
-      - Mete la bicicleta y saca un ticket de parking con el DSR del usuario.
-      - Coloca el ticket en el vehículo.
+      - Mete la bicicleta e ingresa la matrícula en la base de datos.
     - En caso contrario:
-      - Avisa al usuario que no tiene derecho a parking y que puede recibirlo si habla con el portero; si la cosa se pone fea, avisa al guarda de seguridad.
+      - Avisa al usuario que no tiene derecho a parking o matrícula y que puede recibirlo si habla con el portero; si la cosa se pone fea, avisa al guarda de seguridad.
     - Si no estás seguro:
       - Llama al portero para que te ayude, si no lográis obtener información, se denegará el acceso.
 - Aparcabicis - Salida:
   - Qué hacer cuando un usuario quiera retirar su vehículo del Parking:
     - Pídele el DSR y comprueba que el DSR y el ticket del vehículo coinciden:
-      - Guarda el ticket y espera al portero para que abra la puerta.
+      - Elimina el registro (la matrícula) de la base de datos.
       - Devuelve el DSR y el vehículo.
     - ¿Qué hago si no tiene disponible el DSR?
       - Solo podrá sacar el vehículo si el portero, guarda de seguridad, y aparcabicis le dan un permiso extraodrinario.
