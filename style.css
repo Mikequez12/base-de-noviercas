@@ -504,8 +504,10 @@ div.clause:hover #entity {
 }
 
 .tree summary {
-  display: block;
-  cursor: pointer;
+    font-size: inherit !important;
+    display: block;
+    cursor: pointer;
+    list-style: none;
 }
 
 .tree summary::marker,
