@@ -144,7 +144,7 @@ async function main() {
     document.querySelector('#mail').textContent = users[dsr].mail;
     document.querySelector('#dsr').textContent = dsr;
     document.querySelector('#rol').textContent = users[dsr].rol;
-    document.querySelector('#matricula').textContent = users[dsr].IRV;
+    document.querySelector('#matricula').textContent = users[dsr].IRV || '(No tienes)';
     document.querySelector('#qrcode').src = `https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${dsr}`;
     document.querySelector('#qrcode').addEventListener('click', () => {
       window.open(`https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${dsr}`,'_blank');
