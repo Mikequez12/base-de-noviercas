@@ -11,10 +11,10 @@
 }
 
 @media (max-width: 600px) {
-  body {
+  body:not(.disablemobile) {
     font-size: 15px;
   }
-  h2 {
+  h2:not(.disablemobile) {
     font-size: 20px;
   }
 }

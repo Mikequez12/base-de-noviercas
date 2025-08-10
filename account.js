@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     let ldv = p.appendChild(document.createElement('div'));
     let dv = ldv.appendChild(document.createElement('div'));
     dv.style.textAlign = 'left';
+    dv.style.fontSize = 'inherit';
     dv.style.margin = `auto`;
     let treeview = dv.appendChild(document.createElement('ul'));
     treeview.classList.add('tree');
