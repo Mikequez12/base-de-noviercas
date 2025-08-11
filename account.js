@@ -227,7 +227,7 @@ async function updateDSRDetector(event) {
     }[id];
     el.querySelector('input').value = nkey.map((k) => values[k]).join(' ');
     if (id == 'search-parking') {
-      el.querySelector('input').value = nkey.map((k) => values[k])[0] ? 'Sí' : 'No';
+      el.querySelector('input').value = nkey.map((k) => values[k])[0]=='TRUE' ? 'Sí' : 'No';
     }
     if (id == 'search-matricula') {
       el.querySelector('input').value = nkey.map(k => values[k])[0] || '(Ninguna)';
