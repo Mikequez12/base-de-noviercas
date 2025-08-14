@@ -1,40 +1,65 @@
-Permiso de entrada:
-  - a. Uso de DSR para verificar la entrada:
-    - No está permitido de ninguna manera entrar sin la autorización del portero. Puedes intentar pasar autorizado de varias maneras:
-    - 1. Enseñar tu DSR:
-      - Tu DSR tiene un número de índice y un código QR que determinan que tienes derecho a entrar, si el guardia escanea el QR o ingresa el número de índice en su programa, el programa verificará si tu DSR es válido.
-    - 2. Usar la web:
-      - En la web, iniciando sesión con tu código de DSR, tienes un código QR que el portero puede interpretar.
-    - 3. Autoportero:
-      - Si eres empleado; en caso de que no haya ningún portero dentro o el portero no esté disponible, puedes entrar.
-  - b. Permiso de entrada en Tours:
-      - Si entras como participante en un tour, debes inscribirte en la web previamente y presentar tus credenciales en la base en la fecha y hora asignadas para acceder.
-  - c. Permiso de entrada de parking:
-      - Es posible que quieras guardar tu bicicleta u otro vehículo. En cuyo caso, solo debes avisar al aparcabicis o al portero. Después, tras una verificación de DSR hecha para conocer si tienes derecho al parking (que puedes demandar en la inscripción) o en la recepción, el aparcabicis se encargará de guardar y proteger tu bicicleta. En caso de que el DSR dictamine que no tienes derecho, tu vehículo será rechazado.
+Entrada:
+  - Reglas generales:
+    - Para entrar, se necesita un permiso. Este permiso se llama DSR (Documento de Seguridad Regional), y se puede obtener creando una cuenta en la web.
+    - No está permitido de ninguna manera entrar sin la autorización del portero. Puedes intentar pasar autorizado de varias maneras.
+  - Verificación del DSR:
+    - Para poder entrar es necesario ser verificado.
+    - Tienes que enseñar tu DSR, que puede estar como tarjeta o en la web. Ambos tienen un código QR que el portero debe escanear. En caso de no tener esas credenciales, puedes decir tu código DSR, aunque el portero puede hacer más preguntas para verificar tu identidad.
+    - En caso de necesitar más servicios, debes pedirselos diréctamente al portero. Puede que él te pida más credenciales (incluso puede ocurrir que te pida volver a iniciar sesión, aunque esto debería ocurrir en actos de sospecha grave). Esto puede ocurrir al querer usar el parking o entrar en un tour entre otros eventos.
+  - Incumplimiento:
+    - Si tratas de irrumpir forzadamente, pelear contra el portero u obstruir el paso de la entrada ya sea con un objeto o contigo mismo, el guardia de seguridad te escoltará a la salida.
+  - Autovalidación:
+    - Si eres un empleado y no hay ningún otro empleado que pueda verificar tu identidad en el interior, puedes entrar sin tener que ser verificado.
+  - Inspecciones de objetos:
+    - El guardia de seguridad, el portero y el aparcabicis pueden inspeccionar tus objetos con algunos detalles. Puede ver todos estos detalles en la sección "inspección de objetos".
+  - ".selector":
+    - Administradores
+    - Miembros
+    - Usuarios
+    - Visitantes
+
+Inspecciones de seguridad:
+  - Sospecha:
+    - Si el guardia de seguridad te evalua como sospechoso de una infricción (de cualquier tipo), podrá pedirte credenciales de nuestro sistemas y algunos externos (como DNI, u otra documentación que dictamine su identidad).
+    - En caso de ser culpable, aplicará el protocolo, con consecuencias como ser expulsado temporalmente, deshabilitar su DSR entre otras muchas consecuencias...
+    - Si solo resulta ser sospechoso pero el guardia de seguridad considera su estancia peligrosa, intimidante o inadecuada, tendrá el derecho total de expulsarlo.
+  - Derechos del guardia de seguridad:
+    - Un guardia de seguridad no puede agredir en ningún momento ni verbal ni físicamente a nadie a menos que la situación lo requiera específicamente. En caso de presentar una queja, el personal investigará el escenario y los hechos y decidirá si los actos eran necesarios.
+    - El guardia puede pedir cualquier acreditación como DSR, IRV e incluso DNI sin antelación si lo encuentra necesario.
+    - Puedes ser expulsado sin problemas por un guardia de seguridad.
+  - ".selector":
+    - Administradores
+    - Miembros
+    - Usuarios
+    - Visitantes
+
+Derechos del usuario ante administradores:
+  - Puedes presentar una queja formal sin ningún problema. Esto abrirá una investigación seria para investigar la situación.
+  - En caso de que el problema escale, puede pedir un juicio sin problemas. El acusado no puede ser un juez, y si forzosamente tiene que serlo, se puede aplazar a una fecha donde otro administrador esté disponible. Si esto tampoco es posible, el administrador estará obligado a mantener una postura y opinión desinteresada.
   - ".selector":
       - Administradores
       - Miembros
       - Usuarios
       - Visitantes
+
 Manipulación de DSR:
-  - a. Cambios en la tarjeta:
-      - Si se detecta cualquier cambio no-autorizado en la tarjeta del DSR, esta se podría retirar por suplantación, falsificación...
-  - b. Cambios en la base de datos:
-      - Todos los cambios aparecen en nuestros registros, si se encuentra una actividad sospechosa, se comenzará una investigación hasta dar con el culpable, quien será expulsad@ automáticamente (Estos cambios no cuentan en el responsable de las bases de datos).
-  - c. Falsificación o copia:
-      - Si un DSR resulta ser falso o es una copia no-original, podrás ser expulsado de la base hasta 2 semanas. Nos tomamos muy seriamente nuestra seguridad y la de todos los demás, así que recuerda que debes presentarte con las credenciales correctas y verificar su autenticidad.
+  - Cambios en la tarjeta:
+      - Si se detecta cualquier cambio no-autorizado en la tarjeta del DSR, esta se podría retirar por suplantación, falsificación entre muchas otras infricciones.
+  - Cambios en la base de datos:
+      - Todos los cambios aparecen en nuestras bases de datos, si se encuentra una actividad sospechosa, se comenzará una investigación. Si se encuentra un culpable, este será expulsado automáticamente (Estos cambios no cuentan en el responsable de las bases de datos). Si se sospecha de un cambio desde el lado del cliente sin autorización, se tomarán las mismas medidas.
   - ".selector":
       - Administradores
       - Miembros
       - Usuarios
       - Visitantes
-Inspecciones:
-  - a. Importación y exportación de elementos:
-    - Todos los elementos serán inspeccionados antes de su ingreso y de su salida para evitar robos, daños u otras situaciones inconvenientes solo si estos resultan sospechosos para el empleado que realiza la inspección. Estas inspecciones las realizará comunmente el portero, aunque el aparcabicis puede hacerlo también con vehículos; si ninguno de los dos está disponible, los demás empleados podrán hacerlo también.
-  - b. Derechos de un sujeto ante una inspección:
-    - 1. Todo humano tiene pertenencias privadas que no quiere enseñar. En cuyo caso, puede decir "no quiero enseñar esto". Al evocar la frase, el objeto quedará requisado en la entrada durante toda la visita, aunque no podrá ser aberto ni inspeccionado por nadie más; si esta frase no es evocada, aceptas que tus objetos sean inspeccionados de forma cuidadosa pero estricta.
-    - 2. Ningún inspector tiene derecho a inspeccionar objetos de rango 1 ni la mayoría de rango 2 (solo si estos son gravemente sospechosos), aunque si el portero rechaza la entrada de algún objeto, este no podrá entrar en la base.
-    - 3. Los objetos se catalogan en los siguientes rangos:
+
+Inspecciones de objetos:
+  - Importación y exportación de elementos:
+    - Todos los elementos serán inspeccionados antes de su ingreso y de su salida para evitar robos, daños u otras situaciones inconvenientes (solo si estos objetos resultan mínimamente sospechosos para el empleado que realiza la inspección). Estas inspecciones las realizará comunmente el portero, aunque el aparcabicis y guardia de seguridad pueden hacerlo también; si ninguno de los dos está disponible, los demás empleados podrán hacerlo también.
+  - Derechos de un sujeto ante una inspección:
+    - Todo humano tiene pertenencias privadas que no quiere enseñar. En cuyo caso, puede decir "No quiero enseñar esto". Al pronunciar la frase, el objeto quedará requisado en la entrada durante toda la visita, aunque no podrá ser aberto ni inspeccionado por nadie más; si esta frase no es evocada, aceptas que tus objetos sean inspeccionados de forma cuidadosa pero estricta.
+    - Ningún inspector tiene derecho a inspeccionar objetos de rango 1 ni la mayoría de rango 2 (solo si estos son gravemente sospechosos), aunque si el portero rechaza la entrada de algún objeto, este no podrá entrar en la base. En estos casos, el usuario puede pedir al portero que guarde el objeto junto a los objetos requisados para mayor seguridad. Este objeto no será inspeccionado.
+    - Los objetos se catalogan en los siguientes rangos:
       - Grado 1 (Intocable por cualquiera):
         - Teléfonos, Tablet, Portátiles, ...
       - Grado 2 (Restricciones marcadas por el visitante):
@@ -44,58 +69,61 @@ Inspecciones:
       - Grado 4 (Inspecciones rutinarias):
         - Cascos, DSRs, Cámaras, ...
   - ".selector":
+      - Administradores
       - Miembros
       - Usuarios
       - Visitantes
+
 Agresión:
-  - a. Agresión física o/y psicológica:
-    - Nadie tiene derecho a agredir a otro; esta regla es inválida en dos casos. 1. El agresor es el guardia de seguridad (esta agresión puede ser denunciada al juez). 2. Se está agrediendo en defensa propia (esto no significa que se puedan evitar las consecuencias incluso con falta de pruebas). En caso de infringir esta norma, el sujeto se verá obligad@ a abandonar el recinto inmediatamente, siendo el castigo mínimo deshabilitar temporalmente el DSR y el máximo quedar expulsado permanentemente de la base, 
+  - Agresión física o/y psicológica:
+    - Nadie tiene derecho a agredir a otro. En caso de que ocurra una agresión, por favor, acude al guardia de seguridad.
   - ".selector":
     - Administradores
     - Miembros
     - Usuarios
     - Visitantes
-Destrucción:
-  - a. Destrozar la base:
-    - Si un juez decreta que has destrozado una parte de la base a posta, serás expulsado inmediatamente, y tu DSR será deshabilitado en caso de que el juez determine el asalto como un daño grave.
+
+Destrucción y obstrucción:
+  - Destrozar la base:
+    - Tras una destrucción, si un juez decreta que has destrozado una parte de la base a posta, serás expulsado inmediatamente, y tu DSR será deshabilitado en caso de que el juez determine el asalto como un daño grave.
+  - Obstrucción de las vías:
+    - En caso de obstruir por completo (o parcialmente) una vía (ya sea un paso peatonal, carril bici, puertas, barreras, etc.).
   - ".selector":
     - Administradores
     - Miembros
     - Usuarios
     - Visitantes
+
 Poderes del consejo de empleados:
-  - a. Expulsión
-    - Si el 70% de la comunidad de empleados opina que un empleado debería ser despedido, se convocará una reunión donde se evaluarán cada una de estas opiniones. Si las justificaciones son válidas conforme al reglamento, el empleado será expulsado.
+  - Expulsión
+    - Si el 75% de la comunidad de empleados opina que un empleado debería ser despedido, se convocará una reunión donde se evaluarán cada una de estas opiniones. Si las justificaciones son válidas conforme al reglamento, el empleado será expulsado.
   - ".selector":
     - Administradores
+
 Derechos de los empleados:
   - Todos los empleados tienen el mismo poder. Da igual lo que piense cada uno. Todos los empleados y usuarios tienen toda la libertad de expresión y ninguno será discriminado por libertad de expresión / identidad / género / raza / edad etc.
   - ".selector":
     - Administradores
+
 Derechos de terceros:
   - Toda persona tiene derecho a revisar el reglamento, a hacer preguntas sobre el funcionamento, a pedir ayuda y a comentar todo lo que quiera.
   - ".selector":
     - Miembros
     - Usuarios
     - Visitantes
+
 Carril bici:
-  - a. Estorbo:
-    - 1. Personas:
-      - Ningún sujeto puede estorbar el carril bici. Esta ley se aplica a todos los usuarios, empleados, visitantes... exceptuando al aparcabicis (si este está en su turno y trata de solucionar un problema grave) y al constructor si el carril bici está en obras.
-    - 2. Objetos:
-      - Está prohibido dejar objetos estorbando el carril bici y su espacio aéreo, pues pueden causar accidentes indeseados.
-  - b. Paso peatonal:
-    - Todo usuario o visitante puede pasar por un paso de peatones si no hay ningun vehículo circulando. Esta acción de pasar por el cruce, debe ser claramente señalizado al personal de vigiliancia y a todos las personas que circulen en sus vehículos.
-  - c. Líneas cortadas:
-    - Las líneas cortadas se encuentran en el borde de la intersección del carril bici, que divide la base principal y el parking. Esta línea indica que solo los empleados pueden pasar por ella. En caso de pasar por ella sin querer, puede retroceder y no tendrá nada de qué preocuparse.
+  - El carril bici está señalizado con piedras en forma de vía, este es el lugar donde pasa el aparcabicis, y está estrictamente prohibido obstruirlo o pasar por ahí sin estar autorizado.
   - ".selector":
     - Administradores
     - Usuarios
     - Visitantes
-Seguridad:
-  - a. Publicación de datos:
-    - No nos hacemos cargo de toda información que comparta un usuario / empleado / visitante; por ende, si alguien comparte su ID de DSR, credencial u otros datos, es responsabilidad de él / ella / ellos. Es posible que alguien comparta su ID de DSR sin querer, en cuyo caso podemos intentar cambiar su ID, sin embargo, recalcamos que este proceso es válido solo una vez, y es un proceso lento y demorado.
-  - b. Estorbo de entradas o salidas:
+
+Seguridad general:
+  - Publicación de datos:
+    - No nos hacemos cargo de toda información que comparta un usuario / empleado / visitante; por ende, si alguien comparte su DSR, credenciales u otros datos, es responsabilidad de él / ella / ellos.
+    - Es posible que alguien comparta su DSR sin querer, en cuyo caso podemos intentar cambiar su DSR, sin embargo, recalcamos que este proceso es válido solo una vez, y es un proceso lento y demorado.
+  - Estorbo de entradas o salidas:
     - A menos de que estés autorizado por el guardia de seguridad o el aparcabicis, no podrás estorbar las entradas o salidas (incluyendo por supuesto las de seguridad). Puedes ser expulsado y tu DSR puede ser deshabilitado temporalmente.
   - ".selector":
     - Administradores

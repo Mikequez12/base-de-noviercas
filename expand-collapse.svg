@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20">
-  <g fill="#fff">
+  <g fill="#0000">
     <path d="m5 9h4v-4h2v4h4v2h-4v4h-2v-4h-4z"/>
     <path d="m25 9h10v2h-10z"/>
+  </g>
+  <g fill="white">
+    <polygon points="7 5, 7 15, 14 10" />
+    <polygon transform="translate(40, 0) rotate(90)" points="7 5, 7 15, 14 10" />
   </g>
 </svg>

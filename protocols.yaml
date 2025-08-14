@@ -1,59 +1,104 @@
-- Recorridos entre empleados:
-  - Entrada de vehículos:
-    - Portero - Pide el DSR y llama al aparcabicis
-    - Aparcabicis - Verifica el DSR y matrícula y devuelve el DSR al portero
-    - Portero - Devuelve el DSR al usuario y entrega el vehículo al aparcabicis
-    - Aparcabicis - Accede con el vehículo
-  - Salida de vehículos:
-    - Portero - Pide y verifica el DSR y se lo entrega al aparcabicis
-    - Aparcabicis - Saca el vehículo y entrega el DSR
-    - Portero - Entrega el vehículo y el DSR
-- Portero - Entrada:
-  - Qué hacer cuando alguien pida entrar (O alguien va a entrar)::
-    - Pedir el DSR:
-      - Si el DSR no es válido o el usuario rechaza la petición:
-        - Rechazar formalmente la petición de entrada
-      - En caso contrario:
-        - Si te da las credenciales en forma de tarjeta o en forma del QR en el apartado de "cuenta" en la web:
-          - Verificar la identidad y derechos
-          - Verificar la coincidencia de la matrícula con el DSR
-          - Devolver el DSR, dejar pasar al usuario y dar los buenos días
-        - Si te da las credenciales en forma de foto:
-          - Denegar el acceso, la tarjeta se tiene que enseñar físicamente o mediante la web.
-- Guarda de seguridad - Inflicción:
-  - Cómo actuar cuando ocurre una inflicción::
-    - Intentar hacer lo necesario para cumplir el reglamento de guardia
-    - Informar al usuario sobre su infricción
-    - Si sigue infringiendo las normas::
-      - Tratar de comunicarte con un juez y explicar los hechos
-      - Leer los derechos al usuario y explicar que puede defenderse
-      - Trata de cumplir la sentencia del juez con tu autoridad de guardia
-    - En caso de que la ley infringida tenga que ver con otro empleo::
-      - Trata de ponerte en contacto con un empleado con esa responsabilidad
-      - Explica claramente los hechos
-      - Trata de colaborar con ese empleado
-- Aparcabicis - Entrada:
-  - Qué hacer en caso de que un usuario te pida que le aparques la bici::
-    - Verifica que el usuario tiene permiso de parking y matrícula
-    - Si tiene permiso:
-      - Dirige su bicicleta hacia el parking y espera a que el portero te abra la puerta
-      - Mete la bicicleta e ingresa la matrícula en la base de datos.
-    - En caso contrario:
-      - Avisa al usuario que no tiene derecho a parking o matrícula y que puede recibirlo si habla con el portero; si la cosa se pone fea, avisa al guarda de seguridad.
-    - Si no estás seguro:
-      - Llama al portero para que te ayude, si no lográis obtener información, se denegará el acceso.
-- Aparcabicis - Salida:
-  - Qué hacer cuando un usuario quiera retirar su vehículo del Parking:
-    - Pídele el DSR y comprueba que el DSR y el ticket del vehículo coinciden:
-      - Elimina el registro (la matrícula) de la base de datos.
-      - Devuelve el DSR y el vehículo.
-    - ¿Qué hago si no tiene disponible el DSR?
-      - Solo podrá sacar el vehículo si el portero, guarda de seguridad, y aparcabicis le dan un permiso extraodrinario.
-- Guía - Atención a visitantes y usuarios:
-  - En caso de quedarse en blanco:
-    - Pide ayuda sin problemas a tus compañeros
-    - Trata de ser discreto
-  - Infringimientos del reglamento:
-    - Llama al guardia de seguridad
-    - Deja que haga su trabajo
-    - Continúa mientras tanto con el resto de visitantes
+- Portero:
+  - Entrada:
+    - Registro al usuario:
+      - Visitante de tour:
+        - Verifica el nombre y apellidos de los invitados con el de tu dispositivo
+        - Trata de hacer que te enseñen pruebas de sus identidades, ya sea mediante DSR o DNI
+      - Visitante normal:
+        - Verificar DSR:
+          - Recuerda verificar que el DSR sea válido
+          - Versiones válidas:
+            - Web oficial de la base
+            - Tarjeta física
+            - Código (al habla):
+              - Si el usuario te dice su DSR hablando, debe mostrar una credencial (DNI u otro documento).
+              - Verifica que los datos del documento coincidan con el DSR y que ambos coincidan con el usuario.
+        - Si el DSR no es válido, explica por qué no puede pasar.
+        - Si no está registrado, enséñale cómo crear una cuenta en la web y notifíca al DEV.
+    - Si trae objetos:
+      - Examinar cada objeto por los siguientes criterios:
+        - Sospecha - Si el objeto es muy extraño en ese contexto
+        - Peligro - Si puede servir para dañar a otros usuarios o a la base
+        - Odio - Si el objeto incita al odio a otros usuarios
+        - Legalidad - Es un objeto ilegal ya sea dentro o fuera de la base
+        - Fragilidad - Si no está garantizado que el objeto esté seguro en la base
+        - Sanidad - Si puede tener patógenos (enfermedades, bacterias, ...)
+        - Volumen / Peso - Si es un objeto muy grande o muy pesado
+        - Distracción - No distrae a ningún trabajador ni incomoda a usuarios
+      - Recordar que el usuario se puede negar a las inspecciones.
+      - Por cada objeto no inspeccionado o con una inspección fallida:
+        - Guardar y proteger en la garita.
+    - Si va a usar el parking:
+      - Verifica que el usuario sea el aparcabicis, solo él puede acceder al parking por el carril bici
+      - Si no es él, llama al aparcabicis, colócate en la barrera del parking y sigue los pasos de esa sección
+  - Salida:
+    - Registrar el material que trae
+    - Registrar su vehículo
+    - Notificar sobre los riesgos de pérdida de objetos como moviles y DSR
+  - Barrera - Parking (entrada):
+    - Pedir DSR del empleado y el IRV del dueño del vehículo
+    - Si el DSR es de rango "administrador", dejar pasar
+    - Entrar al parking desde la entrada peatonal y darle al aparcabicis una plaza libre
+    - Registrar la entrada teniendo en cuenta la plaza ocupada y la fecha y hora actual
+  - Barrera - Parking (salida):
+    - Pedir DSR del empleado y el IRV del dueño del vehículo
+    - Si el DSR es de rango "administrador", dejar salir
+    - Dirigirse a la entrada de la base
+    - Registrar la salida del vehículo teniendo en cuenta la plaza ocupada y la fecha y hora actual
+    - Abrir la puerta al aparcabicis
+  - Barrera - Almacén:
+    - Pedir DSR del usuario
+    - Si el DSR es de rango "administrador" o "miembro", dejar pasar
+  - Barrera - Zona de empleados:
+    - Pedir DSR del usuario
+    - Si el DSR es de rango "administrador", dejar pasar
+
+- Guardia de seguridad:
+  - Infricción:
+    - Explicar calmadamente la infricción que ha cometido el usuario
+    - Ayudar con consejos para evitar este escenario de nuevo
+    - Opcionalmente, ayuda decir dónde puede ver el reglamento
+    - Si esta infricción se repite recurrentemente con otros usuarios:
+      - Convocar una junta con los empleados
+      - Explicar las distintas infricciones que han habido
+    - Si la infricción se repite recurrentemente en el mismo usuario:
+      - Evaluar cómo de importante y necesario es cumplir la regla
+      - Evaluar el estado del usuario
+      - Si la regla es importante y el usuario está bien:
+        - Retener formalmente al usuario
+        - Explicar la gravedad de sus actos y posibles consecuencias
+        - Si en el reglamento hay adjunta una consecuencia:
+          - Aplicar la consecuencia de inmediato
+          - Explicar al usuario qué opciones tiene tratando de ayudar
+        - Si no hay ninguna consecuencia escrita:
+          - Evaluar junto a otros administradores
+          - Aplicar la consecuencia decidida
+          - Explicar al usuario qué opciones tiene tratando de ayudar
+
+- Aparcabicis:
+  - Petición de entrada:
+    - Pedir DSR al usuario
+    - Verificar que tiene derecho a parking
+    - Anotar su IRV (matrícula)
+    - Ir a la entrada de la base
+    - Mostrar tu DSR al portero, decir el IRV del usuario
+    - Esperar a que verifique tus credenciales, y te abra la barrera
+    - Esperar dentro del parking hasta que te diga la plaza donde debes colocarte
+    - Verificar que anote en la base de datos el vehículo
+  - Petición de salida:
+    - Pedir DSR al usuario
+    - Verificar que el vehículo que demanda está a su nombre
+    - Llamar al portero y exigir que te abra la barrera del parking
+    - Esperar en la entrada hasta que el portero te abra la puerta
+
+- Guía:
+  - Guía para empleados:
+    - Mantén un tono formal y serio
+    - Aférrate a los puntos de la reunión
+    - No se recomienda improvisar
+    - Puedes llevar un papel o guión tranquílamente
+  - Guía para visitantes:
+    - Manten un tono formal pero divertido
+    - Revisa los puntos de la reunión
+    - Puedes inprovisar sin problemas
+    - Puedes llevar notas, pero no guiones a menos que no te sepas nada de tu guión

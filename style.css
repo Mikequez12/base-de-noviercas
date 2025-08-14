@@ -496,7 +496,7 @@ div.clause:hover #entity {
   display: block;
   position: absolute;
   top: calc(var(--spacing) / -2);
-  left: -2px;
+  left: -1.5px;
   width: calc(var(--spacing) + 2px);
   height: calc(var(--spacing) + 1px);
   border: solid #ddd;
@@ -504,10 +504,14 @@ div.clause:hover #entity {
 }
 
 .tree summary {
-    font-size: inherit !important;
-    display: block;
-    cursor: pointer;
-    list-style: none;
+  font-size: inherit !important;
+  display: block;
+  cursor: pointer;
+  list-style: none;
+}
+
+.tree li, .tree ul {
+  padding-top: 3px;
 }
 
 .tree summary::marker,
@@ -539,10 +543,12 @@ div.clause:hover #entity {
 .tree summary::before {
   z-index: 1;
   background: var(--main-color) url('expand-collapse.svg') 0 0;
+  transition: .5s ease;
 }
 
 .tree details[open] > summary::before {
-  background-position: calc(-2 * var(--radius)) 0;
+  /*background-position: calc(-2 * var(--radius)) 0;*/
+  transform: rotate(90deg);
 }
 
 
@@ -552,21 +558,31 @@ div.clause:hover #entity {
 
 #protocols {
   text-align: center;
-  display:flex;
-  justify-content:center;
-  align-content:center;
+  display: block;
+  column-count: 2;
+  justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
   align-items: stretch;
 }
 
+#protocols ul.tree * {
+  font-size: 15px !important;
+}
+
 #protocols > div {
-  width: calc(50% - 40px);
-  margin: 5.5px;
+  width: calc(100% - 20px);
+  margin: 5.5px 0;
   display:inline-block;
   /*
   display: flex;
   flex-wrap: wrap;
   */
+}
+
+ul.tree {
+  text-indent: 0;
+  padding-left: 0;
 }
 
 #protocols > div > * {
