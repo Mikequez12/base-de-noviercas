@@ -130,3 +130,21 @@ Seguridad general:
     - Miembros
     - Usuarios
     - Visitantes
+
+Barreras:
+  - Entrada:
+    - Solo pueden acceder usuarios con DSR o usuarios participantes de un tour
+  - Parking:
+    - Solo puede acceder el aparcabicis
+  - Almacén:
+    - Solo pueden acceder administradores o miembros
+  - Zona de empleados:
+    - Solo pueden acceder miembros o administradores
+  - salida de emergencias:
+    - Solo se puede salir, no se puede entrar
+    - Se puede salir durante emergencias
+  - ".selector":
+    - Administradores
+    - Miembros
+    - Usuarios
+    - Visitantes
