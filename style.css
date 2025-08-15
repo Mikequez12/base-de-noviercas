@@ -14,11 +14,6 @@ html {
   body:not(.disablemobile) h2 {
     font-size: 30px;
   }
-  html {
-    -webkit-text-size-adjust: 120%; /* iOS Safari */
-    -ms-text-size-adjust: 120%;    /* IE Mobile */
-    text-size-adjust: 120%;        /* estándar */
-  }
 }
 
 :root {
