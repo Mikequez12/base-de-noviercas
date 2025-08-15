@@ -14,14 +14,10 @@ html {
   body:not(.disablemobile) h2 {
     font-size: 30px;
   }
-}
-
-@media (max-width: 600px) {
-  body:not(.disablemobile) {
-    font-size: 15px;
-  }
-  h2:not(.disablemobile) {
-    font-size: 20px;
+  html {
+    -webkit-text-size-adjust: 120%; /* iOS Safari */
+    -ms-text-size-adjust: 120%;    /* IE Mobile */
+    text-size-adjust: 120%;        /* estándar */
   }
 }
 
