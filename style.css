@@ -1,5 +1,11 @@
 @import url('font.css');
 
+html {
+  -webkit-text-size-adjust: 100%; /* iOS Safari */
+  -ms-text-size-adjust: 100%;    /* IE Mobile */
+  text-size-adjust: 100%;        /* estándar */
+}
+
 @media (max-width: 1000px) {
   body:not(.disablemobile) {
     font-size: 25px;
@@ -504,7 +510,6 @@ div.clause:hover #entity {
 }
 
 .tree summary {
-  font-size: inherit !important;
   display: block;
   cursor: pointer;
   list-style: none;
