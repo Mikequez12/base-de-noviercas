@@ -132,17 +132,23 @@ Seguridad general:
     - Visitantes
 
 Barreras:
+  - Solo el portero puede abrir las barreras principales, que son las siguientes.
   - Entrada:
-    - Solo pueden acceder usuarios con DSR o usuarios participantes de un tour
+    - Solo pueden acceder usuarios con DSR o usuarios participantes de un tour.
   - Parking:
-    - Solo puede acceder el aparcabicis
+    - Solo puede acceder el aparcabicis.
   - Almacén:
-    - Solo pueden acceder administradores o miembros
+    - Solo pueden acceder administradores o miembros.
+  - Las barreras secundarias pueden ser abiertas por más personas.
   - Zona de empleados:
-    - Solo pueden acceder miembros o administradores
-  - salida de emergencias:
-    - Solo se puede salir, no se puede entrar
-    - Se puede salir durante emergencias
+    - La pueden abrir los empleados.
+  - Despachos:
+    - Solo puede abrirlo el portero (en caso de que no esté presente el propietario) y el propietario.
+  - Sala de reuniones:
+    - Solo los administradores y los miembros pueden abrir la barrera.
+  - Salida de emergencias:
+    - Solo se puede salir, no se puede entrar.
+    - Solo se puede salir durante emergencias.
   - ".selector":
     - Administradores
     - Miembros
