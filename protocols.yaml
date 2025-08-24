@@ -52,6 +52,10 @@
   - Barrera - Zona de empleados:
     - Pedir DSR del usuario
     - Si el DSR es de rango "administrador", dejar pasar
+  - Barrera - Despecho:
+    - Si el propietario del despacho no está presente, se puede abrir la barrera.
+  - Barrera - Zona de reuniones:
+    - Si alguien quiere entrar verifica que sea miembro o administrador.
 
 - Guardia de seguridad:
   - Infricción:
