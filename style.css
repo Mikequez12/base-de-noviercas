@@ -362,7 +362,8 @@ logo#hide {
   align-content: center;
   justify-content: center;
   align-items: center;
-  display:block;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 div#msgPanel {
